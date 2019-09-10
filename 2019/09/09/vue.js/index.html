@@ -395,7 +395,7 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        182
+                        290
                     </div>
                     
 
@@ -423,8 +423,32 @@
 M:Mode<span class="token punctuation">(</span>模型<span class="token punctuation">)</span>
 V<span class="token punctuation">(</span>视图<span class="token punctuation">)</span>
 VM<span class="token punctuation">(</span>模型和视图，起到由模型数据向视图展示或接受来自视图中的数据，然后经计算返回到视图的作用<span class="token punctuation">)</span></code></pre>
-<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">1、创建一个html文件，这里我用的是JetBrains WebStorm，用它管理一些js，html之类的感觉很方便。
+2、然后引入vue.min.js文件，下面是代码
+<span class="token operator">&lt;</span><span class="token operator">!</span>DOCTYPE html<span class="token operator">></span>
+<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">"en"</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>head<span class="token operator">></span>
+    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>title<span class="token operator">></span>VueDemo<span class="token operator">&lt;</span>/title<span class="token operator">></span>
+
+    <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"vue.min.js"</span><span class="token operator">></span><span class="token operator">&lt;</span>/script<span class="token operator">></span>
+<span class="token operator">&lt;</span>/head<span class="token operator">></span>
+<span class="token operator">&lt;</span>body<span class="token operator">></span>
+        <span class="token operator">&lt;</span>div class<span class="token operator">=</span><span class="token string">"student"</span> <span class="token operator">></span>
+            <span class="token punctuation">{</span><span class="token punctuation">{</span>person<span class="token punctuation">}</span><span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span>/div<span class="token operator">></span>
+<span class="token operator">&lt;</span>/body<span class="token operator">></span>
+<span class="token operator">&lt;</span>script<span class="token operator">></span>
+    var vm<span class="token operator">=</span>new Vue<span class="token punctuation">(</span><span class="token punctuation">{</span>
+        el:<span class="token string">'.student'</span>,
+        data: <span class="token punctuation">{</span>
+            person:<span class="token string">'张三'</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span>/script<span class="token operator">></span>
+<span class="token operator">&lt;</span>/html<span class="token operator">></span>
+3、<span class="token operator">&lt;</span><span class="token operator">!</span>--如果student用id，则下面Vue里就用<span class="token string">'#student'</span>--<span class="token operator">></span>
+</code></pre>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre>
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
 <h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre>
@@ -749,7 +773,7 @@ VM<span class="token punctuation">(</span>模型和视图，起到由模型数�
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">429</span>
+                <span class="white-color">537</span>
             
 
             
