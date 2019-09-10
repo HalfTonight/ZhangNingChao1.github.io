@@ -395,14 +395,14 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        290
+                        387
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        1 分
+                        2 分
                     </div>
                     
                 
@@ -449,12 +449,37 @@ VM<span class="token punctuation">(</span>模型和视图，起到由模型数�
 <span class="token operator">&lt;</span>/html<span class="token operator">></span>
 3、<span class="token operator">&lt;</span><span class="token operator">!</span>--如果student用id，则下面Vue里就用<span class="token string">'#student'</span>--<span class="token operator">></span>
 </code></pre>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h3 id="Run"><a href="#Run" class="headerlink" title="Run"></a>Run</h3><pre class=" language-bash"><code class="language-bash">运行之后打开就会显示 张三</code></pre>
+<h3 id="other"><a href="#other" class="headerlink" title="other"></a>other</h3><pre class=" language-bash"><code class="language-bash">另外它还有 v-model、v-bind、v-if、v-else、v-for等
+</code></pre>
+<h3 id="v-model"><a href="#v-model" class="headerlink" title="v-model"></a>v-model</h3><pre class=" language-bash"><code class="language-bash"><span class="token operator">&lt;</span><span class="token operator">!</span>DOCTYPE html<span class="token operator">></span>
+<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">"en"</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>head<span class="token operator">></span>
+    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>title<span class="token operator">></span>VueDemo<span class="token operator">&lt;</span>/title<span class="token operator">></span>
+    <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"vue.min.js"</span><span class="token operator">></span><span class="token operator">&lt;</span>/script<span class="token operator">></span>
+<span class="token operator">&lt;</span>/head<span class="token operator">></span>
+<span class="token operator">&lt;</span>body<span class="token operator">></span>
+        <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"student"</span><span class="token operator">></span>
+            <span class="token punctuation">{</span><span class="token punctuation">{</span>person<span class="token punctuation">}</span><span class="token punctuation">}</span>
+            <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> v-model<span class="token operator">=</span><span class="token string">"num1"</span> <span class="token operator">></span>+<span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> v-model<span class="token operator">=</span><span class="token string">"num2"</span> <span class="token operator">>=</span>
+            <span class="token punctuation">{</span><span class="token punctuation">{</span>Number.parseInt<span class="token punctuation">(</span>num1<span class="token punctuation">)</span>+Number.parseInt<span class="token punctuation">(</span>num2<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+            <span class="token operator">&lt;</span>button <span class="token operator">></span>计算<span class="token operator">&lt;</span>/button<span class="token operator">></span>
+
+        <span class="token operator">&lt;</span>/div<span class="token operator">></span>
+<span class="token operator">&lt;</span>/body<span class="token operator">></span>
+<span class="token operator">&lt;</span>script<span class="token operator">></span>
+    var vm<span class="token operator">=</span>new Vue<span class="token punctuation">(</span><span class="token punctuation">{</span>
+        el:<span class="token string">'#student'</span>,
+        data: <span class="token punctuation">{</span>
+            person:<span class="token string">'计算器'</span>,
+            num1:<span class="token string">'3'</span>,
+            num2:<span class="token string">'2'</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span>/script<span class="token operator">></span>
+<span class="token operator">&lt;</span>/html<span class="token operator">></span></code></pre>
+<h3 id="v-bind"><a href="#v-bind" class="headerlink" title="v-bind"></a>v-bind</h3><pre class=" language-bash"><code class="language-bash">------------------------</code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -773,7 +798,7 @@ VM<span class="token punctuation">(</span>模型和视图，起到由模型数�
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">537</span>
+                <span class="white-color">634</span>
             
 
             
