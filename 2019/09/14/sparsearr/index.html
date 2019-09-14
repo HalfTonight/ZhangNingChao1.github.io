@@ -395,7 +395,7 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        541
+                        539
                     </div>
                     
 
@@ -424,7 +424,7 @@
 我们先要确定棋盘的大小，好创建数组用来模拟，存进去几个数字做测试用。这里创建Arr吧。</code></pre>
 <h3 id="second"><a href="#second" class="headerlink" title="second"></a>second</h3><pre class=" language-bash"><code class="language-bash">遍历第一步创建好的数组，主要是为了拿到Arr中的有效数字<span class="token punctuation">(</span>这里非0表示<span class="token punctuation">)</span>，有效数的个数记作sum.
 </code></pre>
-<h3 id="第三"><a href="#第三" class="headerlink" title="第三"></a>第三</h3><pre class=" language-bash"><code class="language-bash">创建sparseArr：行<span class="token punctuation">(</span>sum+1<span class="token punctuation">)</span>,列<span class="token punctuation">(</span>3<span class="token punctuation">)</span>，<span class="token punctuation">(</span>以为sparseArr数组的第一条记录我们填写原来数组的大小，最后要做恢复记录用<span class="token punctuation">)</span></code></pre>
+<h3 id="thirdly"><a href="#thirdly" class="headerlink" title="thirdly"></a>thirdly</h3><pre class=" language-bash"><code class="language-bash">创建sparseArr：行<span class="token punctuation">(</span>sum+1<span class="token punctuation">)</span>,列<span class="token punctuation">(</span>3<span class="token punctuation">)</span>，<span class="token punctuation">(</span>以为sparseArr数组的第一条记录我们填写原来数组的大小，最后要做恢复记录用<span class="token punctuation">)</span></code></pre>
 <h3 id="fourthly"><a href="#fourthly" class="headerlink" title="fourthly"></a>fourthly</h3><pre class=" language-bash"><code class="language-bash">遍历Arr，开始将有效数字的行列以及值作为sparseArr的第一行的三列存入，下面是代码
 int count<span class="token operator">=</span>0<span class="token punctuation">;</span>
         <span class="token keyword">for</span> <span class="token punctuation">(</span>int i <span class="token operator">=</span> 0<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> 11<span class="token punctuation">;</span> i++<span class="token punctuation">)</span> <span class="token punctuation">{</span>
