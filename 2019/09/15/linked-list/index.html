@@ -402,7 +402,7 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        778
+                        779
                     </div>
                     
 
@@ -464,50 +464,54 @@
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span></code></pre>
 <ol start="3">
-<li><p>修改节点功能<br>思路(1)先找到该节点，通过遍历，<br> (2)  temp.name = newHeroNode.name ; temp.nickname= newHeroNode.nickname<br>代码实现<br>public void update(HeroNodes heroNodes){</p>
-<pre><code> HeroNodes temp=head.next;我们需要一个辅助遍历  temp，head是创建好的空head
- boolean flag=false;根据flag来判断链表是否有要更新的节点是否存在
- while(true){
-     if(temp==null){
-         System.out.println("链表为空");
-         return;
-     }
-     if(temp.no==heroNodes.no){
-         flag=true;
-         break;
-     }
-     //temp要后移，不然会死循环，它的后移就像遍历数组是下标的后移一样
-     temp=temp.next;
- }
- if(flag){
-     //若该节点存在，则修改信息
-     temp.name=heroNodes.name;
-     temp.alias=heroNodes.alias;
- }</code></pre><p> }</p>
+<li><p>修改节点功能<br>思路(1)先找到该节点，通过遍历，<br> (2)  temp.name = newHeroNode.name ; temp.nickname= newHeroNode.nickname<br>代码实现</p>
+<pre class=" language-python"><code class="language-python">public void update<span class="token punctuation">(</span>HeroNodes heroNodes<span class="token punctuation">)</span><span class="token punctuation">{</span>
+     HeroNodes temp<span class="token operator">=</span>head<span class="token punctuation">.</span>next<span class="token punctuation">;</span>我们需要一个辅助遍历  temp，head是创建好的空head
+     boolean flag<span class="token operator">=</span>false<span class="token punctuation">;</span>根据flag来判断链表是否有要更新的节点是否存在
+     <span class="token keyword">while</span><span class="token punctuation">(</span>true<span class="token punctuation">)</span><span class="token punctuation">{</span>
+         <span class="token keyword">if</span><span class="token punctuation">(</span>temp<span class="token operator">==</span>null<span class="token punctuation">)</span><span class="token punctuation">{</span>
+             System<span class="token punctuation">.</span>out<span class="token punctuation">.</span>println<span class="token punctuation">(</span><span class="token string">"链表为空"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+             <span class="token keyword">return</span><span class="token punctuation">;</span>
+         <span class="token punctuation">}</span>
+         <span class="token keyword">if</span><span class="token punctuation">(</span>temp<span class="token punctuation">.</span>no<span class="token operator">==</span>heroNodes<span class="token punctuation">.</span>no<span class="token punctuation">)</span><span class="token punctuation">{</span>
+             flag<span class="token operator">=</span>true<span class="token punctuation">;</span>
+             <span class="token keyword">break</span><span class="token punctuation">;</span>
+         <span class="token punctuation">}</span>
+         <span class="token operator">//</span>temp要后移，不然会死循环，它的后移就像遍历数组是下标的后移一样
+         temp<span class="token operator">=</span>temp<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+     <span class="token keyword">if</span><span class="token punctuation">(</span>flag<span class="token punctuation">)</span><span class="token punctuation">{</span>
+         <span class="token operator">//</span>若该节点存在，则修改信息
+         temp<span class="token punctuation">.</span>name<span class="token operator">=</span>heroNodes<span class="token punctuation">.</span>name<span class="token punctuation">;</span>
+         temp<span class="token punctuation">.</span>alias<span class="token operator">=</span>heroNodes<span class="token punctuation">.</span>alias<span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span></code></pre>
 </li>
-<li><p>删除节点<br>思路分析的示意图:<br><img src="https://raw.githubusercontent.com/ZhangNingChao1/learning/master/img/%E5%88%A0%E9%99%A4%E8%8A%82%E7%82%B9.jpg" alt="cmd-markdown-logo"><br>public void delete(int  no){</p>
-<pre><code> HeroNodes temp=head;
- boolean flag=false;
- while (true){
-     if(temp.next==null){
-         //到链表最后了
-         break;
-     }
-     if (temp.next.no==no){
-         //找到了
-         flag=true;
-         break;
-     }
-     temp=temp.next;
- }
- if(flag){
-     //删除是将要删除的节点的指向目标变为它的像一个节点，这个没有被指向的节点就会被垃圾回             //收机制给回收掉，也就实现的删除
-     temp.next=temp.next.next;
-     System.out.println("删除成功");
- }
- else{
-     System.out.println("未找到编号为"+no+"的节点，无法删除");
- }</code></pre></li>
+<li><p>删除节点<br>思路分析的示意图:<br><img src="https://raw.githubusercontent.com/ZhangNingChao1/learning/master/img/%E5%88%A0%E9%99%A4%E8%8A%82%E7%82%B9.jpg" alt="cmd-markdown-logo"></p>
+<pre class=" language-python"><code class="language-python">public void delete<span class="token punctuation">(</span>int  no<span class="token punctuation">)</span><span class="token punctuation">{</span>
+     HeroNodes temp<span class="token operator">=</span>head<span class="token punctuation">;</span>
+     boolean flag<span class="token operator">=</span>false<span class="token punctuation">;</span>
+     <span class="token keyword">while</span> <span class="token punctuation">(</span>true<span class="token punctuation">)</span><span class="token punctuation">{</span>
+         <span class="token keyword">if</span><span class="token punctuation">(</span>temp<span class="token punctuation">.</span>next<span class="token operator">==</span>null<span class="token punctuation">)</span><span class="token punctuation">{</span>
+             <span class="token operator">//</span>到链表最后了
+             <span class="token keyword">break</span><span class="token punctuation">;</span>
+         <span class="token punctuation">}</span>
+         <span class="token keyword">if</span> <span class="token punctuation">(</span>temp<span class="token punctuation">.</span>next<span class="token punctuation">.</span>no<span class="token operator">==</span>no<span class="token punctuation">)</span><span class="token punctuation">{</span>
+             <span class="token operator">//</span>找到了
+             flag<span class="token operator">=</span>true<span class="token punctuation">;</span>
+             <span class="token keyword">break</span><span class="token punctuation">;</span>
+         <span class="token punctuation">}</span>
+         temp<span class="token operator">=</span>temp<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+     <span class="token keyword">if</span><span class="token punctuation">(</span>flag<span class="token punctuation">)</span><span class="token punctuation">{</span>
+         <span class="token operator">//</span>删除是将要删除的节点的指向目标变为它的像一个节点，这个没有被指向的节点就会被垃圾回             <span class="token operator">//</span>收机制给回收掉，也就实现的删除
+         temp<span class="token punctuation">.</span>next<span class="token operator">=</span>temp<span class="token punctuation">.</span>next<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span>println<span class="token punctuation">(</span><span class="token string">"删除成功"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+     <span class="token keyword">else</span><span class="token punctuation">{</span>
+         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span>println<span class="token punctuation">(</span><span class="token string">"未找到编号为"</span><span class="token operator">+</span>no<span class="token operator">+</span><span class="token string">"的节点，无法删除"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span></code></pre>
+</li>
 </ol>
 <script>
         document.querySelectorAll('.github-emoji')
