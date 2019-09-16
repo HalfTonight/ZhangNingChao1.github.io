@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhangningchao1.github.io/"/>
-  <updated>2019-09-16T13:31:24.856Z</updated>
+  <updated>2019-09-16T14:54:10.428Z</updated>
   <id>https://zhangningchao1.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="https://zhangningchao1.github.io/2019/09/16/resverlinked/"/>
-    <id>https://zhangningchao1.github.io/2019/09/16/resverlinked/</id>
-    <published>2019-09-16T13:30:53.696Z</published>
-    <updated>2019-09-16T13:31:24.856Z</updated>
+    <title>sparseArrPlus</title>
+    <link href="https://zhangningchao1.github.io/2019/09/16/sparsearr-fu-ben/"/>
+    <id>https://zhangningchao1.github.io/2019/09/16/sparsearr-fu-ben/</id>
+    <published>2019-09-16T14:54:10.425Z</published>
+    <updated>2019-09-16T14:54:10.428Z</updated>
     
     <summary type="html">
     
@@ -29,8 +29,31 @@
       
         
         
-          &lt;h1 id=&quot;反转链表&quot;&gt;&lt;a href=&quot;#反转链表&quot; class=&quot;headerlink&quot; title=&quot;反转链表&quot;&gt;&lt;/a&gt;反转链表&lt;/h1&gt;&lt;hr&gt;
-&lt;h2 id=&quot;有这样一道面试题，反转一个已知的带head的链表&quot;&gt;&lt;a
+          &lt;h1 id=&quot;数组模拟环形队列&quot;&gt;&lt;a href=&quot;#数组模拟环形队列&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>resverLinkedList</title>
+    <link href="https://zhangningchao1.github.io/2019/09/16/resverlinked/"/>
+    <id>https://zhangningchao1.github.io/2019/09/16/resverlinked/</id>
+    <published>2019-09-16T13:30:53.696Z</published>
+    <updated>2019-09-16T14:55:06.697Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;h2 id=&quot;有这样一道面试题，反转一个已知的带head的链表&quot;&gt;&lt;a href=&quot;#有这样一道面试题，反转一个已知的带head的链表&quot; class=&quot;headerlink&quot;
         
       
     
