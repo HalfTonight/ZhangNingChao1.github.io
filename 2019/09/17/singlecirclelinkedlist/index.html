@@ -4,8 +4,12 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 月半今宵">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="SingleCircleLinkedList, 月半今宵">
+    <meta name="description" content="
+intro
+经典例子Josephu问题
+约瑟夫问题的示意图
+Josephu问题    Josephu问题为：设编号为    1，2，…  n的  n个人围坐一圈，约定编号为  k（1&amp;lt;=k&amp;lt;=n）的人从 1开始报数，数到m的那">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Hello World | 月半今宵</title>
+    <title>SingleCircleLinkedList | 月半今宵</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -260,13 +264,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Hello World
+                        SingleCircleLinkedList
                     </div>
                 </div>
             </div>
@@ -388,21 +392,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-09-09
+                    2019-09-17
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        125
+                        597
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        1 分
+                        2 分
                     </div>
                     
                 
@@ -418,15 +422,77 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+                <hr>
+<h2 id="intro"><a href="#intro" class="headerlink" title="intro"></a>intro</h2><p><img src="https://raw.githubusercontent.com/ZhangNingChao1/learning/master/img/%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8.jpg" alt="cmd-markdown-logo"></p>
+<p>经典例子<br>Josephu问题</p>
+<p>约瑟夫问题的示意图<br><img src="https://raw.githubusercontent.com/ZhangNingChao1/learning/master/img/Josephu.jpg" alt="cmd-markdown-logo"></p>
+<p>Josephu问题<br>    Josephu问题为：设编号为    1，2，…  n的  n个人围坐一圈，约定编号为  k（1&lt;=k&lt;=n）的人从 1开始报数，数到m的那个人出列，它的下一位又从1开始报数，数到m的那个人又出列，依次类推，直到所有人出列为止，由此产生一个出队编号的序列。<br>提示：<br>    用一个不带头结点的循环链表来处理 Josephu问题：先构成一个有  n个结点的单循环链表，然后由  k结点起从  1开始计数，计到 m时，对应结点从链表中删除，然后再从被删除结点的下一个结点又从  1开始计数，直到最后一个结点从链表中删除算法结束。</p>
+<hr>
+<p>约瑟夫问题-创建环形链表的思路图解<br><img src="https://raw.githubusercontent.com/ZhangNingChao1/learning/master/img/%E5%88%9B%E5%BB%BA%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8.jpg" alt="cmd-markdown-logo"><br>代码如下：</p>
+<pre class=" language-python"><code class="language-python">Boy boyFirst <span class="token operator">=</span> null<span class="token punctuation">;</span><span class="token operator">//</span>需要一个头
+ public void addBoy<span class="token punctuation">(</span>int num<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Boy curBoy <span class="token operator">=</span> null<span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>num<span class="token operator">&lt;</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span>println<span class="token punctuation">(</span><span class="token string">"小孩数量不正确"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>int i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> num<span class="token punctuation">;</span> i<span class="token operator">+</span><span class="token operator">+</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            Boy tb<span class="token operator">=</span>new Boy<span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                boyFirst<span class="token operator">=</span>tb<span class="token punctuation">;</span>            <span class="token operator">//</span>将第一个节点赋给头节点
+                boyFirst<span class="token punctuation">.</span>next<span class="token operator">=</span>boyFirst<span class="token punctuation">;</span> <span class="token operator">//</span>构成环形链表
+                curBoy<span class="token operator">=</span>boyFirst<span class="token punctuation">;</span>        <span class="token operator">//</span>curBoy记录当前节点位置
+            <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+                curBoy<span class="token punctuation">.</span>next<span class="token operator">=</span>tb<span class="token punctuation">;</span>         <span class="token operator">//</span>将curBoy指向刚创建好的节点
+                tb<span class="token punctuation">.</span>next<span class="token operator">=</span>boyFirst<span class="token punctuation">;</span>       <span class="token operator">//</span>构成环形链表
+                curBoy<span class="token operator">=</span>tb<span class="token punctuation">;</span>              <span class="token operator">//</span>curBoy移动到当前节点
+            <span class="token punctuation">}</span>
+
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span></code></pre>
+<hr>
+<p>约瑟夫问题-小孩出圈的思路分析图<br><img src="https://raw.githubusercontent.com/ZhangNingChao1/learning/master/img/%E5%B0%8F%E5%AD%A9%E5%87%BA%E5%9C%88.jpg" alt="cmd-markdown-logo"></p>
+<pre class=" language-python"><code class="language-python">Boy boyFirst <span class="token operator">=</span> null<span class="token punctuation">;</span>
+    <span class="token operator">/</span><span class="token operator">**</span>
+     <span class="token operator">*</span>
+     <span class="token operator">*</span> @param firstNum 从第几个节点开始数
+     <span class="token operator">*</span> @param passNum  数几个节点
+     <span class="token operator">*</span> @param num       一共有几个节点
+     <span class="token operator">*</span><span class="token operator">/</span>
+    public void outCircle<span class="token punctuation">(</span>int firstNum<span class="token punctuation">,</span>int passNum<span class="token punctuation">,</span>int num<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>firstNum<span class="token operator">&lt;</span><span class="token number">1</span><span class="token operator">|</span><span class="token operator">|</span>firstNum<span class="token operator">></span>num<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span>println<span class="token punctuation">(</span><span class="token string">"数的方式不规范"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        Boy firstBoy <span class="token operator">=</span> boyFirst<span class="token punctuation">;</span>
+        Boy helper <span class="token operator">=</span> null<span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>true<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>firstBoy<span class="token punctuation">.</span>next<span class="token operator">!=</span>boyFirst<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                firstBoy<span class="token operator">=</span>firstBoy<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+                helper <span class="token operator">=</span> firstBoy<span class="token punctuation">;</span>
+                firstBoy <span class="token operator">=</span> firstBoy<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>int i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>firstNum<span class="token punctuation">;</span>i<span class="token operator">+</span><span class="token operator">+</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            firstBoy<span class="token operator">=</span>firstBoy<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+            helper<span class="token operator">=</span>helper<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>true<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>firstBoy<span class="token operator">==</span>helper<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span>int i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> passNum<span class="token punctuation">;</span> i<span class="token operator">+</span><span class="token operator">+</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                firstBoy <span class="token operator">=</span> firstBoy<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+                helper <span class="token operator">=</span> helper<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span>println<span class="token punctuation">(</span><span class="token string">"先出来的小孩是"</span><span class="token operator">+</span> firstBoy<span class="token punctuation">.</span>getNo<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">" 号"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            firstBoy <span class="token operator">=</span> firstBoy<span class="token punctuation">.</span>next<span class="token punctuation">;</span><span class="token operator">//</span>将与要出圈的节点相关联的节点指向变到相关节点上就是删除该节点了。
+            helper<span class="token punctuation">.</span>next <span class="token operator">=</span> firstBoy<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span>println<span class="token punctuation">(</span><span class="token string">"最后在圈里的小孩是"</span><span class="token operator">+</span> firstBoy<span class="token punctuation">.</span>getNo<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">" 号"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span></code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -479,9 +545,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《Hello World》
+                    《SingleCircleLinkedList》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/09/hello-world/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/17/singlecirclelinkedlist/" property="cc:attributionName"
                rel="cc:attributionURL">
                 NC_Z
             </a> 采用
@@ -525,24 +591,27 @@
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/09/09/springboot/">
+                <a href="/2019/09/17/doublelinkedlist/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="SpringBoot">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="DoubleLinkedList">
                         
-                        <span class="card-title">SpringBoot</span>
+                        <span class="card-title">DoubleLinkedList</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-09
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-17
                         </span>
                         <span class="publish-author">
                             
@@ -559,27 +628,30 @@
         
         <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/09/09/hello-world/">
+                <a href="/2019/09/16/sparsearr-fu-ben/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="sparseArrPlus">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">sparseArrPlus</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            数组模拟环形队列
+充分利用数组.将数组看做是一个环形的。(通过取模的方式来实现即可)
+分析说明：
+1)尾索引的下一个为头索引时表示队列满，即将队列容量空出一个作为约定,这个在做判断队列满的时候需要注意  (rear + 1) % maxS
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-09
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-16
                             </span>
                         <span class="publish-author">
                             
@@ -589,7 +661,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
