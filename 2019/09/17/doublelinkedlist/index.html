@@ -4,11 +4,17 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="DoubleLinkedList, 月半今宵">
-    <meta name="description" content="
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return">
+    <meta name="keywords" content="月半今宵">
+    <meta name="description" content="双向链表
+单向链表不足：
+
+*查找的方向只能是一个方向，而双向链表可以向前或者向后查找。*单向链表不能实现自我删除,需要辅助节点，而双向链表可以实现自我删除，并且不需要辅助节点，因为是双向的。
+
+intro
+
+对上图的说明:
+
+1)遍历方法">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +22,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>DoubleLinkedList | 月半今宵</title>
+    <title>月半今宵</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -263,13 +269,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        DoubleLinkedList
+                        
                     </div>
                 </div>
             </div>
@@ -398,7 +404,7 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        52
+                        370
                     </div>
                     
 
@@ -421,7 +427,55 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <script>
+                <h1 id="双向链表"><a href="#双向链表" class="headerlink" title="双向链表"></a>双向链表</h1><hr>
+<p>单向链表<br>不足：</p>
+<blockquote>
+<p>*查找的方向只能是一个方向，而双向链表可以向前或者向后查找。<br>*单向链表不能实现自我删除,需要辅助节点，而双向链表可以实现自我删除，并且不需要辅助节点，因为是双向的。</p>
+</blockquote>
+<h1 id="intro"><a href="#intro" class="headerlink" title="intro"></a>intro</h1><p><img src="https://raw.githubusercontent.com/ZhangNingChao1/learning/master/img/%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8.jpg" alt="cmd-markdown-logo"></p>
+<blockquote>
+<p>对上图的说明:</p>
+</blockquote>
+<p>1)遍历方法和单链表一样，只是可以向前，也可以向后。<br>2)添加   (默认添加到双向链表的最后)<br>(1)先找到双向链表的最后这个节点<br>(2) temp.next = newHeroNode<br>(3) newHeroNode.pre = temp;<br>代码如下：</p>
+<pre class=" language-python"><code class="language-python">    public void addByNo<span class="token punctuation">(</span>HeroNodes2 heroNodes<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        HeroNodes2 temp<span class="token operator">=</span>head<span class="token punctuation">;</span>
+        boolean flag<span class="token operator">=</span>false<span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>true<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>temp<span class="token punctuation">.</span>next<span class="token operator">==</span>null<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>temp<span class="token punctuation">.</span>next<span class="token punctuation">.</span>no <span class="token operator">></span> heroNodes<span class="token punctuation">.</span>no<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>temp<span class="token punctuation">.</span>next<span class="token punctuation">.</span>no <span class="token operator">==</span> heroNodes<span class="token punctuation">.</span>no<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                flag<span class="token operator">=</span>true<span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            temp<span class="token operator">=</span>temp<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span></code></pre>
+<p>3)修改思路和原来的单向链表一样.<br>4)删除<br>(1)因为是双向链表，因此，我们可以实现自我删除某个节点<br>(2)直接找到要删除的这个节点，比如   temp<br>(3) temp.pre.next = temp.next<br>(4) temp.next.pre = temp.pre;<br>代码如下：</p>
+<pre class=" language-python"><code class="language-python">    public void deleteHeroNodes2<span class="token punctuation">(</span>int no<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        HeroNodes2 temp<span class="token operator">=</span>head<span class="token punctuation">;</span>
+        boolean flag<span class="token operator">=</span>false<span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>temp<span class="token punctuation">.</span>next<span class="token operator">==</span>null<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span>println<span class="token punctuation">(</span><span class="token string">"该链表为空"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>temp<span class="token operator">!=</span>null<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>temp<span class="token punctuation">.</span>no<span class="token operator">==</span>no<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                flag<span class="token operator">=</span>true<span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            temp<span class="token operator">=</span>temp<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>flag<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            temp<span class="token punctuation">.</span>pre<span class="token punctuation">.</span>next<span class="token operator">=</span>temp<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>temp<span class="token punctuation">.</span>next<span class="token operator">!=</span>null<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                temp<span class="token punctuation">.</span>next<span class="token punctuation">.</span>pre<span class="token operator">=</span>temp<span class="token punctuation">.</span>pre<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span></code></pre>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -473,7 +527,7 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《DoubleLinkedList》
+                    《》
                 </span> 由
             <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/17/doublelinkedlist/" property="cc:attributionName"
                rel="cc:attributionURL">
@@ -524,18 +578,24 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="DoubleLinkedList">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">DoubleLinkedList</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return
+                            双向链表
+单向链表不足：
+
+*查找的方向只能是一个方向，而双向链表可以向前或者向后查找。*单向链表不能实现自我删除,需要辅助节点，而双向链表可以实现自我删除，并且不需要辅助节点，因为是双向的。
+
+intro
+
+对上图的说明:
+
+1)遍历方法
                         
                     </div>
                     <div class="publish-info">
@@ -746,7 +806,7 @@ Josephu问题    Josephu问题为：设编号为    1，2，…  n的  n个人�
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">6.1k</span>
+                <span class="white-color">6.5k</span>
             
 
             

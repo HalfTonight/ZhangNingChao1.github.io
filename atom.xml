@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhangningchao1.github.io/"/>
-  <updated>2019-09-17T15:21:37.688Z</updated>
+  <updated>2019-09-18T14:58:49.758Z</updated>
   <id>https://zhangningchao1.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>DoubleLinkedList</title>
+    <title></title>
     <link href="https://zhangningchao1.github.io/2019/09/17/doublelinkedlist/"/>
     <id>https://zhangningchao1.github.io/2019/09/17/doublelinkedlist/</id>
     <published>2019-09-17T15:20:49.625Z</published>
-    <updated>2019-09-17T15:21:37.688Z</updated>
+    <updated>2019-09-18T14:58:49.758Z</updated>
     
     <summary type="html">
     
@@ -29,11 +29,7 @@
       
         
         
-          &lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
-       
+          &lt;h1 id=&quot;双向链表&quot;&gt;&lt;a href=&quot;#双向链表&quot; class=&quot;headerlink&quot;
         
       
     
@@ -236,7 +232,7 @@
     <link href="https://zhangningchao1.github.io/2019/09/09/springboot/"/>
     <id>https://zhangningchao1.github.io/2019/09/09/springboot/</id>
     <published>2019-09-09T05:25:54.924Z</published>
-    <updated>2019-09-09T05:29:04.414Z</updated>
+    <updated>2019-09-18T15:14:04.989Z</updated>
     
     <summary type="html">
     
@@ -244,7 +240,10 @@
       
         
         
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+          &lt;hr&gt;
+&lt;p&gt;优点：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;*快速创建独立运行的Spring项目以及主流框架集成。&lt;br&gt;*使用嵌入式的Servlet容器，应用无需打成jar包。&lt;br&gt;*startres自动依赖与版本控制&lt;br&gt;*大量的自动配置，简化开发，也能修改默认值&lt;b
         
       
     
