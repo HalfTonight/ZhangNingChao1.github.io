@@ -30,9 +30,9 @@
     
     
     <entry>
-      <title>sparseArrPlus</title>
-      <link href="/2019/09/16/sparsearr-fu-ben/"/>
-      <url>/2019/09/16/sparsearr-fu-ben/</url>
+      <title>SparseArrPlus</title>
+      <link href="/2019/09/16/sparsearrplus-2/"/>
+      <url>/2019/09/16/sparsearrplus-2/</url>
       
         <content type="html"><![CDATA[<h1 id="数组模拟环形队列"><a href="#数组模拟环形队列" class="headerlink" title="数组模拟环形队列"></a>数组模拟环形队列</h1><hr><p>充分利用数组.将数组看做是一个环形的。(通过取模的方式来实现即可)</p><h3 id="分析说明："><a href="#分析说明：" class="headerlink" title="分析说明："></a>分析说明：</h3><blockquote><p>1)尾索引的下一个为头索引时表示队列满，即将队列容量空出一个作为约定,这个在做判断队列满的<br>时候需要注意  (rear + 1) % maxSize == front满]<br>2)  rear == front [空]<br>3)分析示意图如下</p></blockquote><hr><p><img src="https://raw.githubusercontent.com/ZhangNingChao1/learning/master/img/%E7%8E%AF%E5%BD%A2%E9%98%9F%E5%88%97.jpg" alt=""></p><hr><p>代码如下</p><blockquote><p>我们预留了一个位置，好让添加与取出数据更容易实现。这里rear与front的初始值都为0</p><pre class=" language-python"><code class="language-python"><span class="token operator">//</span>我们预留了一个位置，好让添加与取出数据更容易实现。这里rear与front的初始值都为<span class="token number">0</span> public boolean isEmpty<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">return</span> rear <span class="token operator">==</span> front<span class="token punctuation">;</span>    <span class="token punctuation">}</span>    public boolean isFull<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">return</span> <span class="token punctuation">(</span>rear <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">%</span> maxSize <span class="token operator">==</span> front<span class="token punctuation">;</span><span class="token operator">//</span>取余是为了除去（rear<span class="token operator">+</span><span class="token number">1</span>）<span class="token operator">></span>maxSize的情况    <span class="token punctuation">}</span></code></pre></blockquote><pre><code>public void addQueue(int add) {    if (isFull()) {        System.out.println("队列已满，不能加入数据");        return ;    }    arr[rear] = add;    rear = (rear + 1) % maxSize;}public int getQueue() {    if (isEmpty()) {        throw new RuntimeException("队列为空，没有数据");    }    int i = arr[front];    front = (front + 1) % maxSize;    return i;}public int headQueue() {    if (isEmpty()) {        throw new RuntimeException("队列为空，没有数据");    }    return arr[front];}public void showQueue() {    if (isEmpty()) {        System.out.println("队列空的，没有数据~~");        return;    }    for (int i = front; i &lt; front + size(); i++) {        System.out.println(arr[i % maxSize]);    }}public int size() {    return (rear + maxSize - front) % maxSize;//可能rear在front前面，所以这时我们加上maxSize}</code></pre><p>```</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
@@ -43,7 +43,7 @@
     
     
     <entry>
-      <title>resverLinkedList</title>
+      <title>ResverLinkedList</title>
       <link href="/2019/09/16/resverlinked/"/>
       <url>/2019/09/16/resverlinked/</url>
       
@@ -56,7 +56,7 @@
     
     
     <entry>
-      <title>Linked List</title>
+      <title>LinkedList</title>
       <link href="/2019/09/15/linked-list/"/>
       <url>/2019/09/15/linked-list/</url>
       
@@ -82,7 +82,7 @@
     
     
     <entry>
-      <title>sparseArrPlus</title>
+      <title>SparseArrPlus</title>
       <link href="/2019/09/14/sparsearrplus/"/>
       <url>/2019/09/14/sparsearrplus/</url>
       
