@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhangningchao1.github.io/"/>
-  <updated>2019-09-18T15:17:42.896Z</updated>
+  <updated>2019-09-18T15:20:26.272Z</updated>
   <id>https://zhangningchao1.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>双向链表</title>
+    <title>DoubleLinkedList</title>
     <link href="https://zhangningchao1.github.io/2019/09/17/doublelinkedlist/"/>
     <id>https://zhangningchao1.github.io/2019/09/17/doublelinkedlist/</id>
     <published>2019-09-17T15:20:49.625Z</published>
-    <updated>2019-09-18T15:17:42.896Z</updated>
+    <updated>2019-09-18T15:20:26.272Z</updated>
     
     <summary type="html">
     
