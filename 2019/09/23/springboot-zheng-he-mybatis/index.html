@@ -4,8 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Vue.js, 月半今宵">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="SpringBoot整合Mybatis, 月半今宵">
+    <meta name="description" content="
+SpringBoot作为当下很流行的框架，简化了新Spring应用的初始搭建以及开发过程。优点就不一一列举了，下面是SpringBoot整合mybatis的过程。
+
+创建SpringBoot基础工程有两种方式创建工程：1：创建一个mave">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Vue.js | 月半今宵</title>
+    <title>SpringBoot整合Mybatis | 月半今宵</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -260,13 +263,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Vue.js
+                        SpringBoot整合Mybatis
                     </div>
                 </div>
             </div>
@@ -388,21 +391,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-09-09
+                    2019-09-23
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        385
+                        447
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        2 分
+                        1 分
                     </div>
                     
                 
@@ -418,69 +421,49 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h2 id="intro"><a href="#intro" class="headerlink" title="intro"></a>intro</h2><pre class=" language-bash"><code class="language-bash">vue.js是一个MVVM的框架
-M:Mode<span class="token punctuation">(</span>模型<span class="token punctuation">)</span>
-V<span class="token punctuation">(</span>视图<span class="token punctuation">)</span>
-VM<span class="token punctuation">(</span>模型和视图，起到由模型数据向视图展示或接受来自视图中的数据，然后经计算返回到视图的作用<span class="token punctuation">)</span></code></pre>
-<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">1、创建一个html文件，这里我用的是JetBrains WebStorm，用它管理一些js，html之类的感觉很方便。
-2、然后引入vue.min.js文件，下面是代码
-<span class="token operator">&lt;</span><span class="token operator">!</span>DOCTYPE html<span class="token operator">></span>
-<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">"en"</span><span class="token operator">></span>
-<span class="token operator">&lt;</span>head<span class="token operator">></span>
-    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token operator">></span>
-    <span class="token operator">&lt;</span>title<span class="token operator">></span>VueDemo<span class="token operator">&lt;</span>/title<span class="token operator">></span>
-
-    <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"vue.min.js"</span><span class="token operator">></span><span class="token operator">&lt;</span>/script<span class="token operator">></span>
-<span class="token operator">&lt;</span>/head<span class="token operator">></span>
-<span class="token operator">&lt;</span>body<span class="token operator">></span>
-        <span class="token operator">&lt;</span>div class<span class="token operator">=</span><span class="token string">"student"</span> <span class="token operator">></span>
-            <span class="token punctuation">{</span><span class="token punctuation">{</span>person<span class="token punctuation">}</span><span class="token punctuation">}</span>
-        <span class="token operator">&lt;</span>/div<span class="token operator">></span>
-<span class="token operator">&lt;</span>/body<span class="token operator">></span>
-<span class="token operator">&lt;</span>script<span class="token operator">></span>
-    var vm<span class="token operator">=</span>new Vue<span class="token punctuation">(</span><span class="token punctuation">{</span>
-        el:<span class="token string">'.student'</span>,
-        data: <span class="token punctuation">{</span>
-            person:<span class="token string">'张三'</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&lt;</span>/script<span class="token operator">></span>
-<span class="token operator">&lt;</span>/html<span class="token operator">></span>
-3、<span class="token operator">&lt;</span><span class="token operator">!</span>--如果student用id，则下面Vue里就用<span class="token string">'#student'</span>--<span class="token operator">></span>
+                <pre class=" language-java"><code class="language-java"></code></pre>
+<p>SpringBoot作为当下很流行的框架，简化了新Spring应用的初始搭建以及开发过程。优点就不一一列举了，下面是SpringBoot整合mybatis的过程。</p>
+<ol>
+<li><p>创建SpringBoot基础工程<br>有两种方式创建工程：<br>1：创建一个maven工程，之后引入SpringBoot父工程，然后在引入web，mybatis的相关依赖。<br>2：利用快速方式建立SpringBoot工程。<br>这里我们采用第二种方式创建基础工程，步骤如下：<br>采用 Spring Initializr方式建立工程，之后填上新工程的名字，点击next之后如下图<br><img src="https://raw.githubusercontent.com/ZhangNingChao1/learning/master/img/mybatis.png" alt=""><br>3：图所示显示的页面左侧选择我们可能用到的，这里我们用到了Web和SQL，在中间一列选择我们用到的框架。<br>4：之后就等着相关依赖自动导入了，导入之后它会自动生成一个启动类。</p>
+</li>
+<li><p>下图是我测试的时候建立的一个简易目录（包结构）</p>
+</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/ZhangNingChao1/learning/master/img/%E5%8C%85%E7%BB%93%E6%9E%84.png" alt=""></p>
+<ul>
+<li>pplication.properties中加入配置文件<pre class=" language-java"><code class="language-java">#数据库信息
 </code></pre>
-<h3 id="Run"><a href="#Run" class="headerlink" title="Run"></a>Run</h3><pre class=" language-bash"><code class="language-bash">运行之后打开就会显示 张三</code></pre>
-<h3 id="other"><a href="#other" class="headerlink" title="other"></a>other</h3><pre class=" language-bash"><code class="language-bash">另外它还有 v-model、v-bind、v-if、v-else、v-for等
-</code></pre>
-<h3 id="v-model"><a href="#v-model" class="headerlink" title="v-model"></a>v-model</h3><pre class=" language-bash"><code class="language-bash"><span class="token operator">&lt;</span><span class="token operator">!</span>DOCTYPE html<span class="token operator">></span>
-<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">"en"</span><span class="token operator">></span>
-<span class="token operator">&lt;</span>head<span class="token operator">></span>
-    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token operator">></span>
-    <span class="token operator">&lt;</span>title<span class="token operator">></span>VueDemo<span class="token operator">&lt;</span>/title<span class="token operator">></span>
-    <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"vue.min.js"</span><span class="token operator">></span><span class="token operator">&lt;</span>/script<span class="token operator">></span>
-<span class="token operator">&lt;</span>/head<span class="token operator">></span>
-<span class="token operator">&lt;</span>body<span class="token operator">></span>
-        <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"student"</span><span class="token operator">></span>
-            <span class="token punctuation">{</span><span class="token punctuation">{</span>person<span class="token punctuation">}</span><span class="token punctuation">}</span>
-            <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> v-model<span class="token operator">=</span><span class="token string">"num1"</span> <span class="token operator">></span>+<span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> v-model<span class="token operator">=</span><span class="token string">"num2"</span> <span class="token operator">>=</span>
-            <span class="token punctuation">{</span><span class="token punctuation">{</span>Number.parseInt<span class="token punctuation">(</span>num1<span class="token punctuation">)</span>+Number.parseInt<span class="token punctuation">(</span>num2<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
-            <span class="token operator">&lt;</span>button <span class="token operator">></span>计算<span class="token operator">&lt;</span>/button<span class="token operator">></span>
+</li>
+</ul>
+<p>spring.datasource.driver-class-name=com.mysql.jdbc.Driver<br>spring.datasource.url=jdbc:mysql:///test<br>spring.datasource.username=root</p>
+<h2 id="spring-datasource-password-1234"><a href="#spring-datasource-password-1234" class="headerlink" title="spring.datasource.password=1234"></a>spring.datasource.password=1234</h2><p>#让mybatis与spring关联</p>
+<p>#实体类所在的包路径<br>mybatis.type.aliase.package=domain</p>
+<p>#mapper配置文件所在位置<br>mybatis.mapper-location=classpath:mapper/UserMapper.xml</p>
+<pre><code>
+ - 列表项
 
-        <span class="token operator">&lt;</span>/div<span class="token operator">></span>
-<span class="token operator">&lt;</span>/body<span class="token operator">></span>
-<span class="token operator">&lt;</span>script<span class="token operator">></span>
-    var vm<span class="token operator">=</span>new Vue<span class="token punctuation">(</span><span class="token punctuation">{</span>
-        el:<span class="token string">'#student'</span>,
-        data: <span class="token punctuation">{</span>
-            person:<span class="token string">'计算器'</span>,
-            num1:<span class="token string">'3'</span>,
-            num2:<span class="token string">'2'</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&lt;</span>/script<span class="token operator">></span>
-<span class="token operator">&lt;</span>/html<span class="token operator">></span></code></pre>
-<p>### </p>
-<pre class=" language-bash"><code class="language-bash">------------------------</code></pre>
+在创建的mapper***接口上***添加@Mapper
+
+ - 在启动类上添加
+
+
+```java
+
+MapperScan(value = "mapper")//扫描mapper所在包
+</code></pre><ul>
+<li>下面是Controller中的代码</li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Controller</span>
+<span class="token annotation punctuation">@ResponseBody</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ControllerTest</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Autowired</span>
+    UserMapper userMapper<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//这里可能会报错，没关系启动后容器中就会有对应的mapper了。</span>
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/hello"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> List<span class="token operator">&lt;</span>User<span class="token operator">></span> <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> userMapper<span class="token punctuation">.</span><span class="token function">selAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -533,9 +516,9 @@ VM<span class="token punctuation">(</span>模型和视图，起到由模型数�
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《Vue.js》
+                    《SpringBoot整合Mybatis》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/09/vue.js/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/23/springboot-zheng-he-mybatis/" property="cc:attributionName"
                rel="cc:attributionURL">
                 NC_Z
             </a> 采用
@@ -575,29 +558,33 @@ VM<span class="token punctuation">(</span>模型和视图，起到由模型数�
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/09/14/sparsearr/">
+                <a href="/2019/09/23/springboot-zheng-he-mybatis/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="sparseArr">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="SpringBoot整合Mybatis">
                         
-                        <span class="card-title">sparseArr</span>
+                        <span class="card-title">SpringBoot整合Mybatis</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            
+SpringBoot作为当下很流行的框架，简化了新Spring应用的初始搭建以及开发过程。优点就不一一列举了，下面是SpringBoot整合mybatis的过程。
+
+创建SpringBoot基础工程有两种方式创建工程：1：创建一个mave
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -606,6 +593,7 @@ VM<span class="token punctuation">(</span>模型和视图，起到由模型数�
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -616,27 +604,31 @@ VM<span class="token punctuation">(</span>模型和视图，起到由模型数�
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/09/09/springboot/">
+                <a href="/2019/09/17/doublelinkedlist/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="SpringBoot">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="DoubleLinkedList">
                         
-                        <span class="card-title">SpringBoot</span>
+                        <span class="card-title">DoubleLinkedList</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-优点：
+                            单向链表不足：
+*查找的方向只能是一个方向，而双向链表可以向前或者向后查找。*单向链表不能实现自我删除,需要辅助节点，而双向链表可以实现自我删除，并且不需要辅助节点，因为是双向的。
 
-*快速创建独立运行的Spring项目以及主流框架集成。*使用嵌入式的Servlet容器，应用无需打成jar包。*startres自动依赖与版本控制*大量的自动配置，简化开发，也能修改默认值*无需配置XML，无代码生成，开箱即用*
+intro
+
+对上图的说明:
+
+1)遍历方法和单链表一样
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-09
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-17
                             </span>
                         <span class="publish-author">
                             

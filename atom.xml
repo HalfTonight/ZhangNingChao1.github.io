@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhangningchao1.github.io/"/>
-  <updated>2019-09-18T15:20:26.272Z</updated>
+  <updated>2019-09-23T13:35:06.234Z</updated>
   <id>https://zhangningchao1.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SpringBoot整合Mybatis</title>
+    <link href="https://zhangningchao1.github.io/2019/09/23/springboot-zheng-he-mybatis/"/>
+    <id>https://zhangningchao1.github.io/2019/09/23/springboot-zheng-he-mybatis/</id>
+    <published>2019-09-23T13:15:27.887Z</published>
+    <updated>2019-09-23T13:35:06.234Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;pre class=&quot; language-java&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>DoubleLinkedList</title>
