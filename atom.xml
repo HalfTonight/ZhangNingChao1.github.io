@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhangningchao1.github.io/"/>
-  <updated>2019-09-23T13:35:06.234Z</updated>
+  <updated>2019-10-06T15:27:21.585Z</updated>
   <id>https://zhangningchao1.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>thymeleaf公共页面元素抽取</title>
+    <link href="https://zhangningchao1.github.io/2019/10/06/themleaf-cite/"/>
+    <id>https://zhangningchao1.github.io/2019/10/06/themleaf-cite/</id>
+    <published>2019-10-06T14:59:19.972Z</published>
+    <updated>2019-10-06T15:27:21.585Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;抽取公共片段&lt;pre class=&quot; language-xml&quot;&gt;&lt;code class=&quot;language-xml&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>SpringBoot整合Mybatis</title>
