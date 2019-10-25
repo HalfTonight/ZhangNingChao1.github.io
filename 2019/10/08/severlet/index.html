@@ -4,16 +4,13 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="thymeleaf公共页面元素抽取, 月半今宵">
+    <meta name="keywords" content="月半今宵">
     <meta name="description" content="
-抽取公共片段&amp;lt;div th:fragment=&#34;copy&#34;&gt;
-&amp;amp;copy; 2011 The Good Thymes Virtual Grocery
-&amp;lt;/div&gt;
+使用外部Servelt容器使用外部Servelt容器1.使用SpringBoot initialize器快速创建一个SpringBoot项目，但注意打包方式是war，如下图所示：
 
+  
 
-
-引入公共片段
-&amp;lt;div th:insert">
+        document.querySe">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +18,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>thymeleaf公共页面元素抽取 | 月半今宵</title>
+    <title>月半今宵</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -268,13 +265,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        thymeleaf公共页面元素抽取
+                        
                     </div>
                 </div>
             </div>
@@ -396,14 +393,14 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-10-06
+                    2019-10-08
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        318
+                        92
                     </div>
                     
 
@@ -426,55 +423,10 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <ul>
-<li>抽取公共片段<pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name"><span class="token namespace">th:</span>fragment</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>copy<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token entity" title="&copy;">&amp;copy;</span> 2011 The Good Thymes Virtual Grocery
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
-</li>
-</ul>
-<ul>
-<li><p>引入公共片段</p>
-<pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name"><span class="token namespace">th:</span>insert</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>~{footer :: copy}<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-~{templatename::selector}：模板名::选择器
-~{templatename::fragmentname}:模板名::片段名</code></pre>
-</li>
-<li><p>默认效果：</p>
-<pre class=" language-xml"><code class="language-xml">insert的公共片段在div标签中
-如果使用th:insert等属性进行引入，可以不用写~{}：
-行内写法可以加上：[[~{}]];[(~{})]；</code></pre>
-<p>引入的时候有三种方式，<strong>如下</strong></p>
-</li>
-</ul>
-<hr>
-<p>——th:insert：将公共片段整个插入到声明引入的元素中<br>——th:replace：将声明引入的元素替换为公共片段<br>——th:include：将被引入的片段的内容包含进这个标签中</p>
-<p>效果如下</p>
-<pre class=" language-xml"><code class="language-xml">要引入片段
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>footer</span> <span class="token attr-name"><span class="token namespace">th:</span>fragment</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>copy<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token entity" title="&copy;">&amp;copy;</span> 2011 The Good Thymes Virtual Grocery
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>footer</span><span class="token punctuation">></span></span>
-引入方式
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name"><span class="token namespace">th:</span>insert</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>footer :: copy<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-效果
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>footer</span><span class="token punctuation">></span></span>
-<span class="token entity" title="&copy;">&amp;copy;</span> 2011 The Good Thymes Virtual Grocery
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>footer</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-
-引入方式
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name"><span class="token namespace">th:</span>replace</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>footer :: copy<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-效果
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>footer</span><span class="token punctuation">></span></span>
-<span class="token entity" title="&copy;">&amp;copy;</span> 2011 The Good Thymes Virtual Grocery
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>footer</span><span class="token punctuation">></span></span>
-
-引入方式
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name"><span class="token namespace">th:</span>include</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>footer :: copy<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-效果
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
-<span class="token entity" title="&copy;">&amp;copy;</span> 2011 The Good Thymes Virtual Grocery
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+                <hr>
+<h2 id="使用外部Servelt容器"><a href="#使用外部Servelt容器" class="headerlink" title="使用外部Servelt容器"></a>使用外部Servelt容器</h2><p>使用外部Servelt容器<br>1.使用SpringBoot initialize器快速创建一个SpringBoot项目，但注意打包方式是war，如下图所示：</p>
+<p><img src="https://raw.githubusercontent.com/ZhangNingChao1/learning/master/img/war.png" alt="SpringBoot打成war包"></p>
+<p>  <img src="https://raw.githubusercontent.com/ZhangNingChao1/learning/master/img/web.png" alt="此处输入图片的描述"></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -527,9 +479,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《thymeleaf公共页面元素抽取》
+                    《》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/10/06/themleaf-cite/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/10/08/severlet/" property="cc:attributionName"
                rel="cc:attributionURL">
                 NC_Z
             </a> 采用
@@ -573,29 +525,31 @@
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/10/08/severlet/">
+                <a href="/2019/10/25/eight-queen-yong-di-gui-shi-xian-hui-su/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Eight queen (用递归实现回溯)">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">Eight queen (用递归实现回溯)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
                             
-使用外部Servelt容器使用外部Servelt容器1.使用SpringBoot initialize器快速创建一个SpringBoot项目，但注意打包方式是war，如下图所示：
+8皇后游戏介绍：在8×8格的国际象棋上摆放八个皇后，使其不能互相攻击，即任意两个皇后都不能处于同一行、同一列或同一斜线上，问有多少种摆法。如下图所示：
 
-  
 
-        document.querySe
+###分析：
+
+第一个皇后先放第一行第一列。
+第二个皇后放在第二行第一列、然后判断
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-08
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-25
                         </span>
                         <span class="publish-author">
                             
@@ -615,27 +569,32 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/09/23/springboot-zheng-he-mybatis/">
+                <a href="/2019/10/06/themleaf-cite/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="SpringBoot整合Mybatis">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="thymeleaf公共页面元素抽取">
                         
-                        <span class="card-title">SpringBoot整合Mybatis</span>
+                        <span class="card-title">thymeleaf公共页面元素抽取</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
                             
-SpringBoot作为当下很流行的框架，简化了新Spring应用的初始搭建以及开发过程。优点就不一一列举了，下面是SpringBoot整合mybatis的过程。
+抽取公共片段&lt;div th:fragment="copy">
+&amp;copy; 2011 The Good Thymes Virtual Grocery
+&lt;/div>
 
-创建SpringBoot基础工程有两种方式创建工程：1：创建一个mave
+
+
+引入公共片段
+&lt;div th:insert
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-23
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-06
                             </span>
                         <span class="publish-author">
                             

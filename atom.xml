@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhangningchao1.github.io/"/>
-  <updated>2019-10-06T15:27:21.585Z</updated>
+  <updated>2019-10-25T15:21:25.498Z</updated>
   <id>https://zhangningchao1.github.io/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Eight queen (用递归实现回溯)</title>
+    <link href="https://zhangningchao1.github.io/2019/10/25/eight-queen-yong-di-gui-shi-xian-hui-su/"/>
+    <id>https://zhangningchao1.github.io/2019/10/25/eight-queen-yong-di-gui-shi-xian-hui-su/</id>
+    <published>2019-10-25T15:18:24.479Z</published>
+    <updated>2019-10-25T15:21:25.498Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;h3 id=&quot;8皇后游戏介绍：&quot;&gt;&lt;a href=&quot;#8皇后游戏介绍：&quot; class=&quot;headerlink&quot; title=&quot;8皇后游戏介绍：&quot;&gt;&lt;/a&gt;&lt;strong&gt;8皇后游戏介绍：&lt;/strong&gt;&lt;/h3&gt;&lt;pre class=&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://zhangningchao1.github.io/2019/10/08/severlet/"/>
+    <id>https://zhangningchao1.github.io/2019/10/08/severlet/</id>
+    <published>2019-10-08T15:03:21.412Z</published>
+    <updated>2019-10-09T15:24:15.859Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;h2 id=&quot;使用外部Servelt容器&quot;&gt;&lt;a href=&quot;#使用外部Servelt容器&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>thymeleaf公共页面元素抽取</title>
