@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhangningchao1.github.io/"/>
-  <updated>2019-10-25T15:32:49.611Z</updated>
+  <updated>2019-11-12T15:40:01.736Z</updated>
   <id>https://zhangningchao1.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://zhangningchao1.github.io/2019/11/12/mian-shi-bu-fen/"/>
+    <id>https://zhangningchao1.github.io/2019/11/12/mian-shi-bu-fen/</id>
+    <published>2019-11-12T15:39:09.828Z</published>
+    <updated>2019-11-12T15:40:01.736Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;pre class=&quot; language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;1.注解@Controller@Service@Component@Repository区别
+    在目前的 Spring 版本中，这 3 个注释和
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Eight queen (用递归实现回溯)</title>
